@@ -16,4 +16,59 @@
   <bean id="zhanggaSay" class="com.cnspring.entity.User" p:username="张嘎" p:userSpeaking="三天不打小鬼子，手都痒痒！"/>
   <bean id="RodSay" class="com.cnspring.entity.User" p:username="Rod" p:userSpeaking="世界上有10种人，认识二进制的和不认识二进制的。"/>
 
+  <bean id="entity" class="com.cnspring.entity.TestEntity">
+    <property name="specialCharacter1">
+      <value><![CDATA[P&G]]></value>
+    </property>
+    <property name="specialCharacter2">
+      <value>P&amp;G</value>
+    </property>
+    <property name="innerBean">
+      <bean class="com.cnspring.entity.User">
+        <property name="username">
+          <value>Mr.Inner</value>
+        </property>
+      </bean>
+    </property>
+    <property name="list">
+      <list>
+        <value>足球</value>
+        <value>篮球</value>
+      </list>
+    </property>
+    <property name="array">
+      <list>
+        <value>足球</value>
+        <value>篮球</value>
+      </list>
+    </property>
+    <property name="set">
+      <set>
+        <value>足球</value>
+        <value>篮球</value>
+      </set>
+    </property>
+    <property name="map">
+      <map>
+        <entry>
+          <key>
+            <value>football</value>
+          </key>
+          <value>足球</value>
+        </entry>
+        <entry>
+          <key>
+            <value>basketball</value>
+          </key>
+          <value>篮球</value>
+        </entry>
+      </map>
+    </property>
+    <property name="emptyValue">
+      <value></value>
+    </property>
+    <property name="nullValue">
+      <null/>
+    </property>
+  </bean>
 </beans>

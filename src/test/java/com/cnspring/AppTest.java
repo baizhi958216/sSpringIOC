@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.cnspring.entity.TestEntity;
 import com.cnspring.entity.User;
 import com.cnspring.service.UserService;
 
@@ -52,6 +53,14 @@ public class AppTest
         User Rod=(User)context.getBean("RodSay");
         service.userSpeaking(zhangga);
         service.userSpeaking(Rod);
+        context.close();
+    }
+
+    @Test
+    public void test4(){
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        TestEntity testEntity = (TestEntity)context.getBean("entity");
+        testEntity.showValue();
         context.close();
     }
 }
