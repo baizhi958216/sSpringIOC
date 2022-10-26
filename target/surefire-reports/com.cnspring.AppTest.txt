@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.cnspring.AppTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.273 s <<< FAILURE! - in com.cnspring.AppTest
+test1(com.cnspring.AppTest)  Time elapsed: 0.246 s  <<< ERROR!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService' defined in class path resource [applicationContext.xml]: Could not resolve matching constructor on bean class [com.cnspring.service.UserServiceImpl] (hint: specify index/type/name arguments for simple parameters to avoid type ambiguities)
+	at com.cnspring.AppTest.test1(AppTest.java:28)
+
