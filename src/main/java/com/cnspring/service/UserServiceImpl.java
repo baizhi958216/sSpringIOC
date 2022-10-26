@@ -16,4 +16,12 @@ public class UserServiceImpl implements UserService {
   public void addNewUser(User user) {
     dao.save(user);
   }
+
+  public UserDao getDao(){
+    return dao;
+  }
+
+  public void setDao(UserDao dao){
+    this.dao = dao;
+  }
 }

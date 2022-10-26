@@ -34,4 +34,13 @@ public class AppTest
         service.addNewUser(user);
         context.close();
     }
+
+    @Test
+    public void test2(){
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService service = (UserService)context.getBean("userService");
+        User user=(User)context.getBean("user");
+        service.addNewUser(user);
+        context.close();
+    }
 }
