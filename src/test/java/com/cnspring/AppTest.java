@@ -63,4 +63,17 @@ public class AppTest
         testEntity.showValue();
         context.close();
     }
+
+    @Test
+    public void test5(){
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService service = (UserService)context.getBean("userService");
+        User user = new User();
+        user.setId(1);
+        user.setUsername("zhangsan");
+        user.setPassword("123");
+        user.setEmail("zhangsan@qq.com");
+        service.addNewUser(user);
+        context.close();
+    }
 }
