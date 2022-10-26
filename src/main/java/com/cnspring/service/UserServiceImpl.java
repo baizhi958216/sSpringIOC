@@ -17,6 +17,10 @@ public class UserServiceImpl implements UserService {
     dao.save(user);
   }
 
+  public void userSpeaking(User user) {
+    dao.speaking(user);
+  }
+
   public UserDao getDao(){
     return dao;
   }

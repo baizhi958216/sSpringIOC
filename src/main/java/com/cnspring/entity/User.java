@@ -5,6 +5,9 @@ public class User {
   private String username;
   private String password;
   private String email;
+
+  private String userSpeaking;
+
   public Integer getId() {
     return id;
   }
@@ -32,6 +35,12 @@ public class User {
   @Override
   public String toString() {
     return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + "]";
+  }
+  public String getUserSpeaking() {
+    return userSpeaking;
+  }
+  public void setUserSpeaking(String userSpeaking) {
+    this.userSpeaking = userSpeaking;
   }
   
 }
